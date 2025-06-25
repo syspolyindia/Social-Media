@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="editProfile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">SocialMedia</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Profiles" class="search-input">
+        </div>        <div class="header-actions">
+            <div class="notification" id="notificationBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bell-icon">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+            </div>
+            <button class="logout-btn" id="logout">Log out</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="edit-profile-container">
+            <!-- Cover Image Section -->
+            <div class="edit-section">
+                <label class="section-label">Cover Image</label>
+                <div class="cover-image-container">
+                    <img src="/placeholder.svg?height=200&width=800" alt="Cover" id="coverImage" class="cover-image">
+                    <div id="coverImageSpinner" class="cover-image-spinner" style="display: none;"></div>
+                    <div class="image-overlay">
+                        <label for="coverImageInput" class="change-image-text">Change this picture</label>
+                        <input type="file" id="coverImageInput" accept="image/*" class="hidden-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avatar Section -->
+            <div class="edit-section">
+                <label class="section-label">Avatar</label>
+                <div class="avatar-container">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Avatar" id="avatar" class="avatar">
+                    <div id="avatarSpinner" class="cover-image-spinner" style="display: none;"></div>
+                    <div class="image-overlay">
+                        <label for="avatarInput" class="change-image-text">Change</label>
+                        <input type="file" id="avatarInput" accept="image/*" class="hidden-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name Section -->
+            <div class="edit-section">
+                <label for="fullNameInput" class="section-label">Name</label>
+                <div class="name-edit-container">
+                    <input type="text" id="fullNameInput" value="Roman Caesar" class="name-input">
+                    <button id="saveNameBtn" class="save-name-btn hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to profile button -->
+        <div class="back-button-container">
+            <a href="../userProfile/profile.html" class="back-button" id="backToProfile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Profile
+            </a>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <div class="toast-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <div class="toast-message" id="toastMessage">Changes saved successfully!</div>
+        </div>
+    </div>    <script src="../navbar.js"></script>
+    <script src="editProfile.js"></script>
+</body>
+</html>

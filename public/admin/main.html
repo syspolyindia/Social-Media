@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Social Media</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="main.html" class="nav-item active">
+                    <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="post-management/post-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-file-alt"></i></span>
+                    <span class="nav-text">Post Management</span>
+                </a>
+                <a href="user-management/user-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-users"></i></span>
+                    <span class="nav-text">User Management</span>
+                </a>
+                <a href="referral-management/referral-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-sync"></i></span>
+                    <span class="nav-text">Referral Management</span>
+                </a>
+                <a href="comment-management/comment-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-comments"></i></span>
+                    <span class="nav-text">Comment Management</span>
+                </a>
+                <a href="subscription-management/subscription-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-credit-card"></i></span>
+                    <span class="nav-text">Subscription Management</span>
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+            <header class="top-bar">
+                <button id="toggle-sidebar"><i class="fas fa-bars" style="display: none;"></i></button>
+                <div class="user-info">
+                    <span>Admin User</span>
+                </div>
+            </header>
+            <main class="dashboard">
+                <h1>Dashboard</h1>
+                <div class="dashboard-cards">
+                    <div class="card" onclick="window.location.href='./post-management/post-management.html'">
+                        <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="card-title">Post Management</div>
+                        <div class="card-description">View and manage user posts</div>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Posts:</span>
+                                <span class="stat-value" id="total-posts">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="window.location.href='./user-management/user-management.html'">
+                        <div class="card-icon"><i class="fas fa-users"></i></div>
+                        <div class="card-title">User Management</div>
+                        <div class="card-description">Manage user accounts and permissions</div>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Active Users:</span>
+                                <span class="stat-value" id="active-users">Loading...</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Inactive Users:</span>
+                                <span class="stat-value" id="inactive-users">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="window.location.href='./referral-management/referral-management.html'">
+                        <div class="card-icon"><i class="fas fa-sync"></i></div>
+                        <div class="card-title">Referral Management</div>
+                        <div class="card-description">Track and manage user referrals</div>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Accepted Referrals:</span>
+                                <span class="stat-value" id="accepted-referrals">Loading...</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Pending Referrals:</span>
+                                <span class="stat-value" id="pending-referrals">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="window.location.href='./comment-management/comment-management.html'">
+                        <div class="card-icon"><i class="fas fa-comments"></i></div>
+                        <div class="card-title">Comment Management</div>
+                        <div class="card-description">Moderate user comments</div>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Comments:</span>
+                                <span class="stat-value" id="total-comments">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="window.location.href='./subscription-management/subscription-management.html'">
+                        <div class="card-icon"><i class="fas fa-credit-card"></i></div>
+                        <div class="card-title">Subscription Management</div>
+                        <div class="card-description">Manage user subscriptions</div>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Subscriptions:</span>
+                                  <span class="stat-value" id="total-subscriptions">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

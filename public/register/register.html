@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <div class="form-container">
+            <!-- Simple message display -->
+            <div id="message-container" style="display: none;"></div>
+            
+            <h1>Create Your Account</h1>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username">
+                    <span class="error" id="username-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <span class="error" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                    <span class="error" id="fullName-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="avatar">Profile Picture</label>
+                    <div class="file-upload">
+                        <div class="file-upload-placeholder" id="avatar-placeholder">
+                            <span class="upload-icon">📷</span>
+                            <span>Click to upload profile picture</span>
+                        </div>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
+                        <div class="preview" id="avatar-preview"></div>
+                    </div>
+                    <span class="error" id="avatar-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="coverImage">Cover Image (Optional)</label>
+                    <div class="file-upload">
+                        <div class="file-upload-placeholder" id="cover-placeholder">
+                            <span class="upload-icon">🖼️</span>
+                            <span>Click to upload cover image</span>
+                        </div>
+                        <input type="file" id="coverImage" name="coverImage" accept="image/*">
+                        <div class="preview" id="coverImage-preview"></div>
+                    </div>
+                    <span class="error" id="coverImage-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Create a password">
+                        <button type="button" class="toggle-password" data-target="password">👁️</button>
+                    </div>
+                    <span class="error" id="password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                        <button type="button" class="toggle-password" data-target="confirmPassword">👁️</button>
+                    </div>
+                    <span class="error" id="confirmPassword-error"></span>
+                </div>
+
+                <button type="submit" class="btn-register">Create Account</button>
+            </form>
+
+            <p class="login-link">
+                Already have an account? <a href="../login/login.html">Log in</a>
+            </p>
+        </div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html> 

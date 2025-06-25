@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Management | Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="referral-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="../main.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="../post-management/post-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-file-alt"></i></span>
+                    <span class="nav-text">Post Management</span>
+                </a>
+                <a href="../user-management/user-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-users"></i></span>
+                    <span class="nav-text">User Management</span>
+                </a>
+                <a href="referral-management.html" class="nav-item active">
+                    <span class="nav-icon"><i class="fas fa-sync"></i></span>
+                    <span class="nav-text">Referral Management</span>
+                </a>
+                <a href="../comment-management/comment-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-comments"></i></span>
+                    <span class="nav-text">Comment Management</span>
+                </a>
+                <a href="../subscription-management/subscription-management.html" class="nav-item">
+                    <span class="nav-icon"><i class="fas fa-credit-card"></i></span>
+                    <span class="nav-text">Subscription Management</span>
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+            <header class="top-bar">
+                <button id="toggle-sidebar"><i class="fas fa-bars" style="display: none;"></i></button>
+                <div class="user-info">
+                    <span>Admin User</span>
+                </div>
+            </header>
+            <main class="referral-management">
+                <h1>Referral Management</h1>
+                <div class="top-controls">
+                    <div class="search-container">
+                        <input type="text" id="referral-search" placeholder="Search referrals by username...">
+                        <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                    <div class="referral-value-container">
+                        <div class="referral-value-display">
+                            <span class="referral-value-label">Referral Value:</span>
+                            <span class="referral-value" id="referral-value">Loading...</span>
+                            <button class="edit-referral-btn" id="edit-referral-btn" title="Edit Referral Value">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                        <div class="referral-value-edit" id="referral-value-edit" style="display: none;">
+                            <input type="number" id="referral-value-input" placeholder="Enter value" min="0" step="1">
+                            <button class="save-referral-btn" id="save-referral-btn">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button class="cancel-referral-btn" id="cancel-referral-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="filter-referred-by">Referred By:</label>
+                        <input type="text" id="filter-referred-by" placeholder="Filter by referred by username...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-referred-to">Referred To:</label>
+                        <input type="text" id="filter-referred-to" placeholder="Filter by referred to username...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-referred-user">Referred User:</label>
+                        <input type="text" id="filter-referred-user" placeholder="Filter by referred user username...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-status">Status:</label>
+                        <select id="filter-status">
+                            <option value="">All Status</option>
+                            <option value="accepted">Accepted</option>
+                            <option value="not-accepted">Not Accepted</option>
+                        </select>
+                    </div>
+                    <div class="date-filters-group">
+                        <div class="filter-group">
+                            <label for="filter-date-from">From Date:</label>
+                            <input type="date" id="filter-date-from">
+                        </div>
+                        <div class="filter-group">
+                            <label for="filter-date-to">To Date:</label>
+                            <input type="date" id="filter-date-to">
+                        </div>
+                    </div>
+                    <button id="clear-filters-btn" class="clear-filters-btn">
+                        <i class="fas fa-times"></i> Clear Filters
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table id="referrals-table">
+                        <thead>
+                            <tr>
+                                <th>Referred By</th>
+                                <th>Referred To</th>
+                                <th>Referred User</th>
+                                <th class="sortable" data-sort="date">
+                                    Date <i class="fas fa-sort"></i>
+                                </th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="referral-management.js"></script>
+</body>
+</html>

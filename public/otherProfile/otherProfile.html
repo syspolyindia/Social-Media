@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Social Media Profile</title>
+    <link rel="stylesheet" href="otherProfile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">SocialMedia</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Profiles" class="search-input">
+        </div>        <div class="header-actions">
+            <div class="notification" id="notificationBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bell-icon">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+            </div>
+            <button class="logout-btn" id="logout">Log out</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <!-- Cover Image -->
+            <div class="cover-image-container">
+                <img src="/placeholder.svg?height=200&width=800" alt="Cover Image" id="coverImage" class="cover-image">
+            </div>
+
+            <!-- Profile Info -->
+            <div class="profile-info">
+                <div class="avatar-container">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Profile Avatar" id="avatar" class="avatar">
+                </div>
+                
+                <div class="user-details">
+                    <div class="name-container">
+                        <h1 id="fullName" class="full-name">Roman Ceasar</h1>
+                        <p id="username" class="username">@romanceasar1</p>
+                    </div>
+                    <div class="stats-container">
+                        <p id="subscribers" class="subscribers">410 subscribers</p>
+                    </div>
+                </div>
+                
+                <div class="subscribe-button-container" id="subscribeBtn">
+                    <button class="subscribe-btn" id="subscribeButton">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Posts Section -->
+        <div class="my-posts-section">
+            <div class="my-posts-header">
+                <h2>Posts</h2>
+            </div>
+            <div id="myPostsContainer"></div>
+        </div>
+    </div>    <script src="../navbar.js"></script>
+    <script src="otherProfile.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Social Media Post Creator</title>
+    <link rel="stylesheet" href="createPost.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">SocialMedia</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Profiles" class="search-input" />
+        </div>
+        <div class="header-actions">
+            <div class="notification" id="notificationBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="bell-icon">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+            </div>
+            <button class="logout-btn" id="logout">Log out</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="create-post-card">
+            <div class="card-header">
+                <div class="header-title">Create a post</div>
+                <div class="post-actions">
+                    <button id="add-image-btn" class="action-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </button>
+                    <input type="file" id="file-input" class="file-input" accept="image/*"/>
+                    <button id="add-link-btn" class="action-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <textarea class="post-textarea" placeholder="Write your content here"></textarea>
+                <div class="image-preview-container" style="display: none;">
+                    <img class="image-preview" src="" alt="Preview"/>
+                    <button class="remove-image-btn">X</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button id="create-post-btn" class="create-button">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="../navbar.js"></script>
+    <script src="createPost.js"></script>
+</body>
+</html>

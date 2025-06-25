@@ -1,0 +1,230 @@
+/* Comment Management Styles */
+.comment-management {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Search box styles */
+#comment-search {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Filters container */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  flex: 1;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.clear-filters-btn {
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  align-self: flex-end;
+  white-space: nowrap;
+}
+
+.clear-filters-btn:hover {
+  background-color: #c0392b;
+}
+
+.clear-filters-btn i {
+  margin-right: 5px;
+}
+
+/* Date filters horizontal layout */
+.date-filters-group {
+  display: flex;
+  gap: 15px;
+  min-width: 400px;
+  flex: 2;
+}
+
+.date-filters-group .filter-group {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Sortable header styles for comment management */
+.comment-management .sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.comment-management .sortable:hover {
+  background-color: #f5f7fb;
+}
+
+.comment-management .sortable i {
+  margin-left: 5px;
+}
+
+/* Table styles specific to comment management */
+.comment-management .table-container {
+  margin-top: 20px;
+}
+
+.comment-management td {
+  vertical-align: middle;
+}
+
+.comment-management td:last-child {
+  white-space: nowrap;
+}
+
+/* Button styles for comment management */
+.comment-management .view-btn,
+.comment-management .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-management .view-btn {
+  color: #3498db;
+}
+
+.comment-management .view-btn:hover {
+  color: #2980b9;
+}
+
+.comment-management .delete-btn {
+  color: #e74c3c;
+}
+
+.comment-management .delete-btn:hover {
+  color: #c0392b;
+}
+
+/* Post view link styles */
+.comment-management .view-post {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.comment-management .view-post:hover {
+  text-decoration: underline;
+}
+
+/* Modal content styles */
+.comment-details,
+.post-details {
+  display: grid;
+  gap: 15px;
+}
+
+.comment-details p,
+.post-details p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.comment-details img,
+.post-details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.comment-details strong,
+.post-details strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.comment-details a,
+.post-details a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.comment-details a:hover,
+.post-details a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .comment-management {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: auto;
+  }
+
+  .clear-filters-btn {
+    align-self: stretch;
+  }
+
+  .date-filters-group {
+    flex-direction: column;
+    min-width: auto;
+  }
+
+  .date-filters-group .filter-group {
+    min-width: auto;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Social Referral System</title>
+    <link rel="stylesheet" href="createReferral.css" />
+    <style>
+        /* ... existing styles ... */
+
+        /* Message Popup Styles */
+        .message-popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 500;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        .message-popup.success {
+            background-color: #4ade80;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(74, 222, 128, 0.2);
+        }
+
+        .message-popup.error {
+            background-color: #f87171;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(248, 113, 113, 0.2);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">SocialMedia</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Profiles" class="search-input">
+        </div>
+        <div class="header-actions">
+            <div class="notification" id="notificationBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bell-icon">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+            </div>
+            <button class="logout-btn" id="logout">Log out</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="referral-card">
+            <div class="card-heading">
+                <h2>Create a Referral</h2>
+                <p>Connect people to gain referral points</p>
+            </div>
+
+            <form id="referral-form">
+                <div class="form-group">
+                    <label for="referred-user">User Being Referred</label>
+                    <div class="input-wrapper">
+                        <img src="../assets/user.png" class="input-icon" alt="User Icon">
+                        <input id="referred-user" type="text" class="form-input" placeholder="Enter username of person you're referring">
+                    </div>
+                </div>
+
+                <div class="connection-container">
+                    <div class="connection-line"></div>
+                    <div class="connection-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="connection-line"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="shared-with-user">User to Share With</label>
+                    <div class="input-wrapper">
+                        <img src="../assets/user.png" class="input-icon" alt="User Icon">
+                        <input id="shared-with-user" type="text" class="form-input" placeholder="Enter username of person to receive referral">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <svg class="submit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2L11 13"></path>
+                        <path d="M22 2l-7 20l-4 -9l-9 -4l20 -7z"></path>
+                    </svg>
+                    Create Referral
+                </button>
+            </form>
+        </div>
+    </div>    <script src="../navbar.js"></script>
+    <script src="createReferral.js"></script>
+</body>
+</html>

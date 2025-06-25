@@ -1,0 +1,293 @@
+/* Referral Management Styles */
+.referral-management {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Top controls container */
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+/* Search box styles */
+.search-container {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+}
+
+#referral-search {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#search-btn {
+  padding: 12px 20px;
+  background: #3498db;
+  border: none;
+  color: white;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+#search-btn:hover {
+  background: #2980b9;
+}
+
+#search-btn i {
+  margin-right: 8px;
+}
+
+/* Referral Value Container */
+.referral-value-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  min-width: 200px;
+  margin-left: auto;
+  margin-bottom: 27px;
+}
+
+.referral-value-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.referral-value-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.referral-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3498db;
+  min-width: 40px;
+}
+
+.edit-referral-btn {
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.edit-referral-btn:hover {
+  color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.referral-value-edit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#referral-value-input {
+  width: 60px;
+  padding: 4px 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#referral-value-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.save-referral-btn,
+.cancel-referral-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.save-referral-btn {
+  color: #27ae60;
+}
+
+.save-referral-btn:hover {
+  background-color: #e8f5e9;
+}
+
+.cancel-referral-btn {
+  color: #e74c3c;
+}
+
+.cancel-referral-btn:hover {
+  background-color: #ffebee;
+}
+
+/* Filters container */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  flex: 1;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.clear-filters-btn {
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  align-self: flex-end;
+  white-space: nowrap;
+}
+
+.clear-filters-btn:hover {
+  background-color: #c0392b;
+}
+
+.clear-filters-btn i {
+  margin-right: 5px;
+}
+
+/* Date filters horizontal layout */
+.date-filters-group {
+  display: flex;
+  gap: 15px;
+  min-width: 400px;
+  flex: 2;
+}
+
+.date-filters-group .filter-group {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Sortable header styles for referral management */
+.referral-management .sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.referral-management .sortable:hover {
+  background-color: #f5f7fb;
+}
+
+.referral-management .sortable i {
+  margin-left: 5px;
+}
+
+/* Table styles specific to referral management */
+.referral-management .table-container {
+  margin-top: 20px;
+}
+
+.referral-management td {
+  vertical-align: middle;
+}
+
+.referral-management td:last-child {
+  white-space: nowrap;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .referral-management {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .referral-value-container {
+    justify-content: center;
+    min-width: auto;
+  }
+
+  .filters-container {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: auto;
+  }
+
+  .clear-filters-btn {
+    align-self: stretch;
+  }
+
+  .date-filters-group {
+    flex-direction: column;
+    min-width: auto;
+  }
+
+  .date-filters-group .filter-group {
+    min-width: auto;
+  }
+}
