@@ -102,6 +102,8 @@ function createReferralItem(referral) {
     const username = document.createElement('div');
     username.className = 'referral-username';
     username.textContent = `@${referral.referredUser.username}`;
+    username.style.cursor = "pointer";
+    username.addEventListener('click', () => navigateToProfile(referral.referredUser.username));
     
     userInfo.appendChild(name);
     userInfo.appendChild(username);
@@ -111,7 +113,7 @@ function createReferralItem(referral) {
     referredBy.className = 'referred-by';
     
     if (referral.referredBy && referral.referredBy.username) {
-        referredBy.innerHTML = `Referred By: <a href="#">@${referral.referredBy.username}</a>`;
+        referredBy.innerHTML = `Referred By: <a href="#" onclick = "navigateToProfile('${referral.referredBy.username}')">@${referral.referredBy.username}</a>`;
     } else {
         referredBy.textContent = 'Referred By:';
     }
@@ -216,6 +218,22 @@ function handleAccept(id) {
     });
 }
 
+function navigateToProfile(username) {
+    fetch(`/api/v1/users/c/${username}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${userData.accessToken}`
+        }
+    })
+    .then(response => response.json())
+    .then((data) => {
+        localStorage.setItem('otherProfileData', JSON.stringify(data.data));
+        window.location.href = '../otherProfile/otherProfile.html';
+    })
+    .catch(error => {
+        console.log('Error fetching user data:', error);
+    });
+}
 // Function to handle reject action
 function handleReject(id) {
     console.log(`Rejecting referral with ID: ${id}`);
